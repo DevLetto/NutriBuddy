@@ -1,5 +1,5 @@
 import express from 'express'
-import FoodFactsService from '../Service/FoodFactsService'
+import FoodFactsService from '../Service/FoodFactsService.js'
 
 const router = express.Router()
 
@@ -8,3 +8,5 @@ router.get('/:barcode', async(req, res) =>{
     const result = await FoodFactsService(barcode)
     res.json(result)
 })
+
+export default router
